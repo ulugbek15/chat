@@ -1,5 +1,5 @@
 create table chat;
-create extension "pgcrypto";
+create extension pgcrypto;
 
 create table users(
     user_id serial not null  primary key,
@@ -27,3 +27,8 @@ create table messages(
     sender_id int not null references users(user_id),
     recever_id int not null references users(user_id)
 );
+
+insert into users(user_username, user_password) values
+    ('ulugbek', crypt('1122', gen_salt('bf'))),
+    ('bobur', crypt('1111', gen_salt('bf')))
+;
