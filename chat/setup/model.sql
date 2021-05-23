@@ -30,5 +30,6 @@ create table messages(
 
 insert into users(user_username, user_password) values
     ('ulugbek', crypt('1122', gen_salt('bf'))),
-    ('bobur', crypt('1111', gen_salt('bf')))
+    ('bobur', crypt('1111', gen_salt('bf'))),
+    ('umar', crypt('2222', gen_salt('bf')))
 ;
