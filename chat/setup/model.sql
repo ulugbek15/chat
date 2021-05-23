@@ -23,7 +23,7 @@ create table messages(
     message_id seral not null primary key,
     message_content text,
     message_time datetimetz  default current_timestamp,
-    message_delivery boolean default false,
+    -- message_delivery boolean default false,
     sender_id int not null references users(user_id),
     recever_id int not null references users(user_id)
 )
